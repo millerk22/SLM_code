@@ -1,6 +1,6 @@
 if ~exist('benchmark_flag') || ~benchmark_flag
-	problem = 'twoMoons'
-	type = 'CVR' % CVR, CV, louvain, newman, clauset
+	problem = 'karate'
+	type = 'CV' % CVR, CV, louvain, newman, clauset
 	already_have_eigs = false % in case we computed them on a previous run
 	deterministic = false
 	thread = 22430544;
