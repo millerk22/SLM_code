@@ -1,0 +1,8 @@
+#!/bin/sh
+if [ -f "/etc/debian_version" ]
+then
+	g++ my_eigs.cpp -O3 -std=c++11 -Wall -pedantic-errors -fopenmp -lblas -D_VBLAS_ -o my_eigs.exe
+else
+	export LD_LIBRARY_PATH=/usr/lib64/
+	g++ my_eigs.cpp -O3 -std=c++11 -Wall -pedantic-errors -fopenmp -lblas -D_VBLAS_ -o my_eigs.exe
+fi
